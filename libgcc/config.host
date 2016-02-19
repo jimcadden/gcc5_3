@@ -1269,6 +1269,9 @@ visium-*-elf*)
         extra_parts="$extra_parts crtbegin.o crtend.o crti.o crtn.o"
         tmake_file="visium/t-visium t-fdpbit"
         ;;
+x86_64-*-ebbrt*)
+        extra_parts="crtbegin.o crtend.o"
+        ;;
 xstormy16-*-elf)
 	tmake_file="stormy16/t-stormy16 t-fdpbit"
 	;;
