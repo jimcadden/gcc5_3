@@ -29,6 +29,7 @@ extern int ebbrt_gthread_mutex_destroy(__gthread_mutex_t *mutex);
 extern int ebbrt_gthread_mutex_lock(__gthread_mutex_t *mutex);
 extern int ebbrt_gthread_mutex_trylock(__gthread_mutex_t *mutex);
 extern int ebbrt_gthread_mutex_unlock(__gthread_mutex_t *mutex);
+extern int ebbrt_gthread_recursive_mutex_destroy(__gthread_recursive_mutex_t *mutex);
 extern int ebbrt_gthread_recursive_mutex_lock(__gthread_recursive_mutex_t *mutex);
 extern int ebbrt_gthread_recursive_mutex_trylock(__gthread_recursive_mutex_t *mutex);
 extern int ebbrt_gthread_recursive_mutex_unlock(__gthread_recursive_mutex_t *mutex);
@@ -91,6 +92,12 @@ static inline int
 __gthread_mutex_unlock(__gthread_mutex_t *mutex)
 {
   return ebbrt_gthread_mutex_unlock(mutex);
+}
+
+static inline int
+__gthread_recursive_mutex_destroy(__gthread_recursive_mutex_t *mutex)
+{
+  return ebbrt_gthread_recursive_mutex_destroy(mutex);
 }
 
 static inline int
