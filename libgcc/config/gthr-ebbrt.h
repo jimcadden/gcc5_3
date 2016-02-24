@@ -6,6 +6,7 @@
 extern "C" {
 #endif
 #define __GTHREADS 1
+#define __GTHREADS_CXX0X 1
 
 //FIXME: maybe these should be padded?
 typedef void *__gthread_key_t;
